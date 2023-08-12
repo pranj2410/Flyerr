@@ -1,0 +1,30 @@
+
+
+<div class="login_component">
+    <div class="login_image">
+        <img src="https://images.news18.com/ibnlive/uploads/2018/08/virgin_atlantic.png?im=FitAndFill,width=1200,height=1200" />
+    </div>
+    <div class="login_form">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <div class="input_container" style="padding: 20px;text-align: center;">
+                <div class="input_field" [ngStyle]="{'border-bottom': user && user.invalid && user.touched ? '2px solid red' : '2px solid blue'}" >
+                    <input 
+                        type="text"
+                        placeholder="Enter your username"
+                        formControlName="user"
+                    />
+                    <span *ngIf = "user && user.invalid && user.touched" style = "color: red">Please enter valid username</span>
+                </div>
+                <div class="input_field" [ngStyle]="{'border-bottom': pass && pass.invalid && pass.touched ? '2px solid red' : '2px solid blue'}">
+                    <input 
+                        type="password"
+                        placeholder="Password"
+                        formControlName="pass"
+                    />
+                    <span *ngIf = "pass && pass.invalid && pass.touched" style = "color: red">Please enter valid password</span>
+                </div>
+                <button class="login_btn" style="background-color: #e01933;">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

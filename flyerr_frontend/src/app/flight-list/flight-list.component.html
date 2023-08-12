@@ -1,0 +1,35 @@
+<div class = "centering">
+    <span>Search</span>
+    <input type="text" [(ngModel)] = "filterString">
+    <table class = "table table-bordered table-hover table-dark">
+        <thead>
+            <tr>
+              <th scope="col">FlightNo</th>
+              <th scope="col">Flight Name</th>
+              <th scope="col">Source</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Price</th>
+              <th scope="col">Edit Button</th>
+              <th scope="col">Delete Button</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let fly of flights | search :filterString'  >
+
+                
+                <td>{{fly.id}}</td>
+                <td>{{fly.flightName}}</td>
+                <td>{{fly.source}}</td>
+                <td>{{fly.destination}}</td>
+                <td>{{fly.price}}</td>
+                <td>
+                    <button type="button" class="btn btn-success btn" [routerLink]="['/Edit', fly.id]">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-danger btn" (click) = "delete(fly.id)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

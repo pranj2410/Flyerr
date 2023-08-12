@@ -1,0 +1,24 @@
+<div class="container">
+    <legend>New Flight</legend>
+    <form >
+      
+      <div class="mb-3">
+        <label for="txtName" class="form-label">Name</label>
+        <input type="text" name="flightName" [(ngModel)] = "flightForm.flightName" class="form-control" id="txtName" />
+      </div>
+      <div class="mb-3">
+        <label for="txtSource" class="form-label">Source</label>
+        <input type="text" name="source" [(ngModel)] = "flightForm.source" class="form-control" id="txtSource" />
+      </div>
+      <div class="mb-3">
+        <label for="txtDestination" class="form-label">Destination</label>
+        <input type="text" name="destination" [(ngModel)] = "flightForm.destination" class="form-control" id="txtDestination" />
+      </div>
+      <div class="mb-3">
+        <label for="txtPrice" class="form-label">Price</label>
+        <input type="number" name="price" [(ngModel)] = "flightForm.price" class="form-control" id="txtPrice" />
+      </div>
+      
+      <button type="button" (click)="create()" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
