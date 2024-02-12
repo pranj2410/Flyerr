@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FlightCreateComponent } from './flight-create.component';
 
+// create flight component
+
 describe('FlightCreateComponent', () => {
   let component: FlightCreateComponent;
   let fixture: ComponentFixture<FlightCreateComponent>;
